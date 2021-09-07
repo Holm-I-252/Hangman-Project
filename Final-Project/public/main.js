@@ -96,7 +96,7 @@ document.getElementById("getWord").addEventListener("click", () => {
     <label for="z">Z</label>
     <input type='submit' id='letterSubmit'></input>`;
 
-    let hint = document.getElementsById("hint");
+    let hint = document.getElementById("hint");
     hint.innerHTML = `<h3 id='hintWord' class='hidden'>${word}</h3>
     <button id='reveal'>Check Word</button>`;
 
@@ -162,7 +162,7 @@ document.getElementById("letters").addEventListener("submit", (e) => {
   }
 });
 
-document.getElementsById("reveal").addEventListener("click", () => {
+document.getElementById("reveal").addEventListener("click", () => {
   let element = document.getElementById("hintWord");
   element.classList.toggle("visible");
 });
