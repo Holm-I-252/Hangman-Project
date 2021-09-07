@@ -10,10 +10,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/js", (req, res) => {
-  res.sendFile(path.join(__dirname, "../main.js"));
+  res.sendFile(path.join(__dirname, "public/main.js"));
 });
 
-app.use("/css", express.static(path.join(__dirname, "../style.css")));
+app.use("/css", express.static(path.join(__dirname, "public/style.css")));
 
 const port = process.env.PORT || 3005;
 
