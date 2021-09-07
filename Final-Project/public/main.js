@@ -165,4 +165,5 @@ document.getElementById("letters").addEventListener("submit", (e) => {
 document.getElementById("reveal").addEventListener("click", () => {
   let element = document.getElementById("hintWord");
   element.classList.toggle("visible");
+  console.log("click");
 });
