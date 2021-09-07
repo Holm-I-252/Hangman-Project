@@ -1,0 +1,55 @@
+body {
+  background-color: lightseagreen;
+}
+.headder {
+  color: rgb(236, 231, 231);
+  font-family: "Inter", sans-serif;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+}
+#wordSpace {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  background-color: teal;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+}
+button {
+  font-family: "Inter", sans-serif;
+}
+#blankWord {
+  font-size: xx-large;
+}
+#defSpace {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+}
+#attempts {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+#letters {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+input[name="letter"] {
+  width: 7%;
+}
+label {
+  font-family: "Inter", sans-serif;
+  color: rgb(236, 231, 231);
+}
+input[type="submit"] {
+  margin-left: 20px;
+}
