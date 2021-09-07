@@ -1,4 +1,5 @@
 // Setting up variables
+let word = "";
 let theWord = [];
 let blankWord = [];
 let def = "";
@@ -129,7 +130,7 @@ document.getElementById("letters").addEventListener("submit", (e) => {
     alert("You Win!");
     // see if the player has run out of tries
   } else if (tries <= 1) {
-    alert("Game Over :(");
+    alert(`Game Over. The word was: ${word}.`);
   } else {
     // see if the guess is in the word
     if (!theWord.includes(guess)) {
@@ -163,7 +164,7 @@ document.getElementById("letters").addEventListener("submit", (e) => {
 });
 
 document.getElementById("reveal").addEventListener("click", () => {
+  console.log("click");
   let element = document.getElementById("hintWord");
   element.classList.toggle("visible");
-  console.log("click");
 });
