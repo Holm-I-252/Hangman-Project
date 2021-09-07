@@ -53,3 +53,9 @@ label {
 input[type="submit"] {
   margin-left: 20px;
 }
+.visible {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
+}

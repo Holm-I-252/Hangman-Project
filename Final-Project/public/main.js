@@ -96,6 +96,10 @@ document.getElementById("getWord").addEventListener("click", () => {
     <label for="z">Z</label>
     <input type='submit' id='letterSubmit'></input>`;
 
+    let hint = document.getElementsById("hint");
+    hint.innerHTML = `<h3 id='hintWord' class='hidden'>${word}</h3>
+    <button id='reveal'>Check Word</button>`;
+
     console.log(word);
   });
 });
@@ -156,4 +160,9 @@ document.getElementById("letters").addEventListener("submit", (e) => {
       alert("You Win!");
     }
   }
+});
+
+document.getElementsById("reveal").addEventListener("click", () => {
+  let element = document.getElementById("hintWord");
+  element.classList.toggle("visible");
 });
