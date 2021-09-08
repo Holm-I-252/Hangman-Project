@@ -167,5 +167,9 @@ document.getElementById("letters").addEventListener("submit", (e) => {
 document.getElementById("reveal").addEventListener("click", () => {
   console.log("click");
   let element = document.getElementById("hintWord");
-  element.className.toggle("visible");
+  if (element.clasName === "hidden") {
+    element.className = "visible";
+  } else if (element.className === "visible") {
+    element.className = "hidden";
+  }
 });
