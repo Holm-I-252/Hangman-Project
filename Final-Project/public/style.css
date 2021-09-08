@@ -55,6 +55,7 @@ input[type="submit"] {
 }
 .visible {
   visibility: visible;
+  color: rgb(236, 231, 231);
 }
 .hidden {
   visibility: hidden;
