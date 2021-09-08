@@ -10,40 +10,37 @@ let tried = [];
 // Begin the game
 document.getElementById("getWord").addEventListener("click", () => {
   // Hit the api to get the word
-  axios.get("https://random-words-api.vercel.app/word").then((res) => {
-    // Set the api data to a array and splitting it
-    word = res.data[0].word;
-    lowerWord = word.toLowerCase();
-    theWord = lowerWord.split("");
+  axios
+    .get("https://random-word-form.herokuapp.com/random/noun")
+    .then((res) => {
+      // Set the api data to a array and splitting it
+      console.log(res.data[0]);
+      word = res.data[0];
+      lowerWord = word.toLowerCase();
+      theWord = lowerWord.split("");
 
-    // set the deffinition from the api
-    def = res.data[0].definition;
+      // copy the word array into an array of blanks to be filled in
+      blankWord = [...theWord];
 
-    // copy the word array into an array of blanks to be filled in
-    blankWord = [...theWord];
+      for (let i = 0; i < blankWord.length; i++) {
+        if (blankWord[i] !== "-" && blankWord[i] !== "'") blankWord[i] = "_";
+      }
 
-    for (let i = 0; i < blankWord.length; i++) {
-      blankWord[i] = "_";
-    }
+      // add html elements for the game
+      let wordSpace = document.getElementById("wordSpace");
+      wordSpace.innerHTML = `<h3 id='blankWord'>${blankWord}</h3>`;
 
-    // add html elements for the game
-    let wordSpace = document.getElementById("wordSpace");
-    wordSpace.innerHTML = `<h3 id='blankWord'>${blankWord}</h3>`;
-
-    let defSpace = document.getElementById("defSpace");
-    defSpace.innerHTML = `<h3>Definition: ${def}</h3>`;
-
-    let attempts = document.getElementById("attempts");
-    attempts.innerHTML = `<h3>Attempted Letters:</h3>
+      let attempts = document.getElementById("attempts");
+      attempts.innerHTML = `<h3>Attempted Letters:</h3>
     <div id="triedLetters"></div>
     <h3>Tries Left:</h3>
     <div id="triesLeft"></div>`;
 
-    let triesLeft = document.getElementById("triesLeft");
-    triesLeft.innerHTML = `<h3>${tries}</h3>`;
+      let triesLeft = document.getElementById("triesLeft");
+      triesLeft.innerHTML = `<h3>${tries}</h3>`;
 
-    let input = document.getElementById("letters");
-    input.innerHTML = `<input type='radio' id="a" value="a" name='letter'></input>
+      let input = document.getElementById("letters");
+      input.innerHTML = `<input type='radio' id="a" value="a" name='letter'></input>
     <label for="a">A</label>
     <input type='radio' id="b" value="b" name='letter'></input>
     <label for="b">B</label>
@@ -97,23 +94,23 @@ document.getElementById("getWord").addEventListener("click", () => {
     <label for="z">Z</label>
     <input type='submit' id='letterSubmit'></input>`;
 
-    let hint = document.getElementById("hint");
-    hint.innerHTML = `<h3 id='hintWord' class='hidden'>${word}</h3>
+      let hint = document.getElementById("hint");
+      hint.innerHTML = `<h3 id='hintWord' class='hidden'>${word}</h3>
     <button id='reveal'>Check Word</button>`;
 
-    // adds a hint button that toggles the visibility of a hint
-    document.getElementById("reveal").addEventListener("click", () => {
-      let element = document.getElementById("hintWord");
-      element.classList.toggle("hidden");
+      // adds a hint button that toggles the visibility of a hint
+      document.getElementById("reveal").addEventListener("click", () => {
+        let element = document.getElementById("hintWord");
+        element.classList.toggle("hidden");
+      });
+      console.log(word);
     });
-    console.log(word);
-  });
 });
 
 // event listener for the input
 document.getElementById("letters").addEventListener("submit", (e) => {
   e.preventDefault();
-  // set the input to a guess variable and settign it to lower case
+  // set the input to a guess variable and setting it to lower case
   let input = "";
   function radioButton() {
     let ele = document.getElementsByName("letter");
