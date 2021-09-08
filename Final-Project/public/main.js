@@ -131,7 +131,7 @@ document.getElementById("letters").addEventListener("submit", (e) => {
   if (guess === theWord) {
     alert("You Win!");
     // see if the player has run out of tries
-  } else if (tries <= 1) {
+  } else if (tries < 1) {
     alert(`Game Over. The word was: ${word}.`);
   } else {
     // see if the guess is in the word
