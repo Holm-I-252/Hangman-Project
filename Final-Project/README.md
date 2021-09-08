@@ -2,7 +2,7 @@
 
 This is a hangman game I built for my project in DevMountain fundamentals. It uses an API to get a random word for you to play. You have 10 tries to guess the word. If you run out of tries, you loose. If you can guess all the letters, you win.
 
-![alt text](./start-screen.png "Starting Screen for Hangman")
+![alt text](https://github.com/Holm-I-252/Hangman-Project/blob/main/Final-Project/start-screen.png "Starting Screen for Hangman")
 
 When you reach the site, this is what you should be greeted by.
 
