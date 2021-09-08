@@ -166,10 +166,4 @@ document.getElementById("letters").addEventListener("submit", (e) => {
 // adds a hint button that toggles the visibility of a hint
 document.getElementById("reveal").addEventListener("click", () => {
   console.log("click");
-  let element = document.getElementById("hintWord");
-  if (element.clasName === "hidden") {
-    element.className = "visible";
-  } else if (element.className === "visible") {
-    element.className = "hidden";
-  }
 });
