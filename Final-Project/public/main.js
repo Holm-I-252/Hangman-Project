@@ -104,7 +104,7 @@ document.getElementById("getWord").addEventListener("click", () => {
     // adds a hint button that toggles the visibility of a hint
     document.getElementById("reveal").addEventListener("click", () => {
       let element = document.getElementById("hintWord");
-      element.classList.toggle("visible");
+      element.classList.toggle("hidden");
     });
     console.log(word);
   });
