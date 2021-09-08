@@ -9,3 +9,5 @@ When you reach the site, this is what you should be greeted by.
 ![game screen](./game-screen.PNG "Screen after you start a game")
 
 After you begin a game, this is what you shoudl see. If you click on one of the letter options and hit submit, It will send back a letter as your guess. If it's correct, it will fill in one of the blanks on the screen. Then you can guess again untill the game finishes.
+
+It's made using some HTML, CSS and JavaScript. The backend is created with JavaScript as well. It's deployed on Heroku at https://f6-hangman.herokuapp.com/
