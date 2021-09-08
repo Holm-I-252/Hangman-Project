@@ -98,7 +98,7 @@ document.getElementById("getWord").addEventListener("click", () => {
     <input type='submit' id='letterSubmit'></input>`;
 
     let hint = document.getElementById("hint");
-    hint.innerHTML = `<h3 id='hintWord' class='hidden'>${word}</h3>
+    hint.innerHTML = `<h3 id='hintWord'>${word}</h3>
     <button id='reveal'>Check Word</button>`;
 
     // adds a hint button that toggles the visibility of a hint
