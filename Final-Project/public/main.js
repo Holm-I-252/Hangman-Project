@@ -101,6 +101,10 @@ document.getElementById("getWord").addEventListener("click", () => {
     hint.innerHTML = `<h3 id='hintWord' class='hidden'>${word}</h3>
     <button id='reveal'>Check Word</button>`;
 
+    // adds a hint button that toggles the visibility of a hint
+    document.getElementById("reveal").addEventListener("click", () => {
+      console.log("click");
+    });
     console.log(word);
   });
 });
@@ -161,9 +165,4 @@ document.getElementById("letters").addEventListener("submit", (e) => {
       alert("You Win!");
     }
   }
-});
-
-// adds a hint button that toggles the visibility of a hint
-document.getElementById("reveal").addEventListener("click", () => {
-  console.log("click");
 });
